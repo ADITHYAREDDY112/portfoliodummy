@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Stock</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add a Stock</h2>
+        <form method="POST" action="/add_stock">
+            <input type="text" name="stock_name" placeholder="Stock Name" required>
+            <input type="number" name="shares" placeholder="Shares" min="1" required>
+            <input type="number" step="0.01" name="price" placeholder="Purchase Price" required>
+            <input type="date" name="purchase_date" required>
+            <button type="submit">Add Stock</button>
+        </form>
+    </div>
+</body>
+</html>
